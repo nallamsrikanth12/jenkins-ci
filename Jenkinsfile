@@ -7,10 +7,6 @@ pipeline {
                 timeout(time: 1, unit: 'MINUTES')
                 disableConcurrentBuilds()
     }
-    environment{
-        name: 'DEPLOY_TO', value: 'production' 
-        name: 'SRIKANTH',  value: 'DEVOPS'
-    }
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
@@ -21,6 +17,10 @@ pipeline {
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
 
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+    }
+    environment{
+        name: 'DEPLOY_TO', value: 'production' 
+        name: 'SRIKANTH',  value: 'DEVOPS'
     }
     stages {
         stage('Build') {
