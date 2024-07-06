@@ -53,7 +53,7 @@ pipeline {
                 echo "Password: ${params.PASSWORD}"
                 echo "triggered test"
                 echo "srikanth"
-                thg
+                error 'some failure in pipeline'
             }
         }
     }
