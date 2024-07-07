@@ -3,20 +3,21 @@ pipeline {
         label 'Agent-1'
     }
 
+
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh 'echo Building..'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh 'echo test..'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                 sh 'echo deploy..'
             }
         }
     }
