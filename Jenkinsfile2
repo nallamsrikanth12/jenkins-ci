@@ -56,10 +56,8 @@ pipeline {
 
             }
         }
-    
-}
 
-post { 
+        post { 
         always { 
             echo 'I will always say Hello again!'
         }
@@ -70,4 +68,7 @@ post {
             echo "i will run pipeline is failure"
         }
 
+       }
+    
 }
+
