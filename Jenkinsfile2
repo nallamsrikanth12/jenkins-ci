@@ -18,6 +18,7 @@ pipeline {
     }
 
 
+
     stages {
         stage('Build') {
             steps {
@@ -45,6 +46,7 @@ pipeline {
                 echo "Choice: ${params.CHOICE}"
 
                 echo "Password: ${params.PASSWORD}"
+                echo "this is testing"
             }
         }
     
